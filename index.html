@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Easy Tip</title>
+</head>
+<body>
+
+  <main id="container">
+    <h1>Easy Tip</h1>
+
+    <section class="billTip">
+
+      <div class="billContainer">
+        <label for="bill">Bill</label>
+        <select id="currencies">
+          <option selected value="$">$</option>
+          <option value="HK$">HK$</option>
+          <option value="€">€</option>
+        </select>
+
+        <input placeholder="Your bill"
+        id ="bill"
+        type="number"
+        />
+      </div>
+
+      <div class="selectTip">
+        <div class="space-between">
+          <label for="tipInput">Select tip</label>
+          <p><span id="tipPercent">0</span>%</p>
+        </div>
+        <input id="tipInput" class="range" type="range" value="0">
+      </div>
+
+      <div class="space-between">
+        <p>Tip</p>
+        <p><span class="currency">$</span> <span id="tip">0</span></p>
+      </div>
+      <hr>
+
+      <div class="space-between total">
+        <p>Total</p>
+        <p><span class="currency">$</span> <span id="total">0</span></p>
+      </div>
+
+    </section>
+
+    <section class="split">
+
+      <div class="selectPeople">
+        <div class="space-between">
+          <p>Split</p>
+          <label for="ppInput"><span id="people">1</span> <span id="person">person</span></label>
+        </div>
+        <input id="ppInput" class="range" type="range" value="1" min="1" max="20">
+      </div>
+
+      <div class="space-between">
+        <p>Bill each</p>
+        <p><span class="currency">$</span> <span id="billEach">0</span></p>
+      </div>
+      <div class="space-between">
+        <p>Tip each</p>
+        <p><span class="currency">$</span> <span id="tipEach">0</span></p>
+      </div>
+      <hr>
+      <div class="space-between total">
+        <p>Total each</p>
+        <p><span class="currency">$</span> <span id="totalEach">0</span></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- script -->
+  <script src="app.js" charset="UTF-8"></script>
+
+</body>
+</html>
